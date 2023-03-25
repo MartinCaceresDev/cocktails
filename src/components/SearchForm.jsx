@@ -1,19 +1,24 @@
-import React from 'react'
-import { useGlobalContext } from '../context'
-export default function SearchForm() {
-  const { setSearchTerm } = useGlobalContext()
-  const searchValue = React.useRef('')
+import { useEffect, useRef } from 'react';
+import { useGlobalContext } from '../context';
 
-  React.useEffect(() => {
-    searchValue.current.focus()
+
+export const SearchForm = () => {
+
+  const { setSearchTerm } = useGlobalContext();
+  const searchValue = useRef('');
+
+  useEffect(() => {
+    searchValue.current.focus();
   }, [])
 
-  function searchCocktail() {
+  const searchCocktail = () => {
     setSearchTerm(searchValue.current.value)
-  }
-  function handleSubmit(e) {
-    e.preventDefault()
-  }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <section className='section search'>
       <form className='search-form' onSubmit={handleSubmit}>
@@ -30,4 +35,4 @@ export default function SearchForm() {
       </form>
     </section>
   )
-}
+};

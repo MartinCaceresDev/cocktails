@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Cocktail({ image, name, id, info, glass }) {
+import { Link } from 'react-router-dom';
+
+export const Cocktail = ({ image, name, id, info, glass }) => {
   return (
     <article className='cocktail'>
       <div className='img-container'>
@@ -16,4 +16,4 @@ export default function Cocktail({ image, name, id, info, glass }) {
       </div>
     </article>
   )
-}
+};
