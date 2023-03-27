@@ -247,7 +247,6 @@ Cocktails List
   display: grid;
   row-gap: 2rem;
   column-gap: 2rem;
-  /* align-items: start; */
 }
 
 @media screen and (min-width: 576px) {
