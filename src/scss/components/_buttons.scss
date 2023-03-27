@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+
+.btn,
+.btn-white,
+.btn-primary {
+  text-transform: uppercase;
+  letter-spacing: $mainSpacing;
+  color: $primaryColor;
+  border: 2px solid $primaryColor;
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: $mainTransition;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: $mainBorderRadius;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: $primaryColor;
+  color: $mainWhite;
+}
+
+.btn-white {
+  background: transparent;
+  color: $mainWhite;
+  border-color: $mainWhite;
+}
+
+.btn-white:hover {
+  background: $mainWhite;
+  color: $primaryColor;
+}
+
+.btn-primary {
+  background: $primaryColor;
+  color: $mainWhite;
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  background: $primaryLightColor;
+  color: $primaryColor;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: $lightShadow;
+  text-align: center;
+}
+
+.btn-details {
+  padding: 0.25rem 0.4rem;
+}
+
+.btn-details:hover {
+  background: $primaryLightColor;
+  border-color: $primaryLightColor;
+}

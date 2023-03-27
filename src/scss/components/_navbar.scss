@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as *;
+
+.navbar {
+  background: $mainWhite;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid $primaryColor;
+  box-shadow: $lightShadow;
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: $fullWidth;
+  width: 95vw;
+
+  @media (min-width: 640px) {
+    width: $smallWidth;
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  transition: $mainTransition;
+  margin-right: 0.2rem;
+  padding: 0.25rem;
+
+  @media (min-width: 640px) {
+    margin-right: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.nav-links a:hover {
+  color: $primaryColor;
+}
+
+.logo {
+  width: 5rem;
+
+  @media (min-width: 640px) {
+    width: 12rem;
+  }
+}

@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+
+.cocktail-section {
+  text-align: center;
+}
+
+.drink {
+  width: $smallWidth;
+  max-width: $fullWidth;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.drink img {
+  border-radius: $mainBorderRadius;
+}
+
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+
+.drink span {
+  margin-right: 0.5rem;
+}
+
+.drink-data {
+  background: $primaryLightColor;
+  padding: 0.25rem 0.5rem;
+  border-radius: $mainBorderRadius;
+  color: $primaryColor;
+}
+
+.drink-info {
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .drink-info {
+    padding-top: 0;
+  }
+}
