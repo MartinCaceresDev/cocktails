@@ -9,6 +9,13 @@
   max-width: $fullWidth;
   margin: 0 auto;
   text-align: left;
+
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
 }
 
 .drink img {
@@ -34,17 +41,8 @@
 
 .drink-info {
   padding-top: 2rem;
-}
 
-@media screen and (min-width: 992px) {
-  .drink {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 3rem;
-    align-items: center;
-  }
-
-  .drink-info {
+  @media screen and (min-width: 1024px) {
     padding-top: 0;
   }
 }

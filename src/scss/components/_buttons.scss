@@ -6,7 +6,7 @@
   text-transform: uppercase;
   letter-spacing: $mainSpacing;
   color: $primaryColor;
-  border: 2px solid $primaryColor;
+  border: 2px solid currentColor;
   padding: 0.45rem 0.8rem;
   display: inline-block;
   transition: $mainTransition;
@@ -25,7 +25,7 @@
 .btn-white {
   background: transparent;
   color: $mainWhite;
-  border-color: $mainWhite;
+  border-color: currentColor;
 }
 
 .btn-white:hover {
