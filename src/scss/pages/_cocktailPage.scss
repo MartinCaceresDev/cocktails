@@ -1,6 +1,9 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/placeholders' as *;
+
 
 .cocktail-section {
+  @extend %section;
   text-align: center;
 }
 

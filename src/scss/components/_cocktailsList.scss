@@ -1,20 +1,12 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/placeholders' as *;
 
-.section {
-  padding: 2rem 0;
-
-  @media (min-width: 640px) {
-    padding: 5rem 0;
-  }
+.cocktails-section {
+  @extend %section;
 }
 
-.section-title {
-  font-size: 2rem;
-  text-transform: capitalize;
-  letter-spacing: $mainSpacing;
-  text-align: center;
-  margin-bottom: 3.5rem;
-  margin-top: 1rem;
+.cocktails-section-title {
+  @extend %section-title;
 }
 
 .cocktails-center {
@@ -22,10 +14,9 @@
   margin: 0 auto;
   max-width: $fullWidth;
   display: grid;
-  row-gap: 2rem;
-  column-gap: 2rem;
+  gap: 2rem;
 
   @media screen and (min-width: 640px) {
-    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
   }
 }

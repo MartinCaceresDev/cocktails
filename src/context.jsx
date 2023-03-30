@@ -1,6 +1,5 @@
 import { useState, useContext, useEffect, useCallback, createContext } from 'react';
-
-const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+import { cocktailsBySearchTermBaseURL } from '../utils/urls';
 
 export const AppContext = createContext();
 export const useGlobalContext = () => useContext(AppContext);
@@ -14,7 +13,7 @@ export const AppProvider = ({ children }) => {
   const fetchDrinks = useCallback(async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${url}${searchTerm}`);
+      const response = await fetch(`${cocktailsBySearchTermBaseURL}${searchTerm}`);
       const { drinks } = await response.json();
       if (drinks) {
         const newCocktails = drinks.map(item => {

@@ -8,14 +8,10 @@ export const Navbar = () => {
         <Link to='/'>
           <img src={logo} alt='cocktail db logo' className='logo' />
         </Link>
-        <ul className='nav-links'>
-          <li>
-            <Link to='/'>home</Link>
-          </li>
-          <li>
-            <Link to='/about'>about</Link>
-          </li>
-        </ul>
+        <div className='nav-links'>
+          <Link to='/'>home</Link>
+          <Link to='/about'>about</Link>
+        </div>
       </div>
     </nav>
   )

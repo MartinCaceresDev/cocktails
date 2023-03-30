@@ -4,7 +4,7 @@ import { getSingleCocktail } from '../../utils/getSingleCocktail';
 import { Loading } from '../components';
 
 
-export const SingleCocktail = () => {
+export const CocktailPage = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
   const [cocktail, setCocktail] = useState(null);
@@ -28,7 +28,7 @@ export const SingleCocktail = () => {
   } else {
     const { name, image, category, info, glass, instructions, ingredients } = cocktail;
     return (
-      <section className='section cocktail-section'>
+      <section className='cocktail-section'>
         <Link to='/' className='btn btn-primary'>
           back home
         </Link>

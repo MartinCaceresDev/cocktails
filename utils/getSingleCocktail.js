@@ -1,8 +1,8 @@
-const urlStart = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
+import { singleCocktailBaseURL } from "./urls";
 
 export const getSingleCocktail = async (id)=>{
   try {
-    const response = await fetch(`${urlStart}${id}`);
+    const response = await fetch(`${singleCocktailBaseURL}${id}`);
     const data = await response.json();
     if (data.drinks) {
       const {

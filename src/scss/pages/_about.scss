@@ -1,9 +1,15 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/placeholders' as *;
 
 .about-section {
+  @extend %section;
   width: $smallWidth;
   max-width: $maxWidth;
   margin: 0 auto;
+}
+
+.about-section-title {
+  @extend %section-title;
 }
 
 .about-section p {

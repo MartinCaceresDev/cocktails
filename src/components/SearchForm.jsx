@@ -11,13 +11,7 @@ export const SearchForm = () => {
     searchValue.current.focus();
   }, [])
 
-  const searchCocktail = () => {
-    setSearchTerm(searchValue.current.value)
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const handleSubmit = (e) => e.preventDefault();
 
   return (
     <section className='section search'>
@@ -29,7 +23,7 @@ export const SearchForm = () => {
             name='name'
             id='name'
             ref={searchValue}
-            onChange={searchCocktail}
+            onChange={e => setSearchTerm(e.target.value)}
           />
         </div>
       </form>
