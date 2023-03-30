@@ -5,8 +5,8 @@
   margin-bottom: 2rem;
   box-shadow: $lightShadow;
   transition: $mainTransition;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
   border-radius: $mainBorderRadius;
 }
 

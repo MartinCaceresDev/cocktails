@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.cocktailPage-section-title {
+  @extend %section-title;
+}
+
 .drink {
   width: $smallWidth;
   max-width: $fullWidth;
@@ -25,27 +29,24 @@
   border-radius: $mainBorderRadius;
 }
 
-.drink p {
-  font-weight: bold;
-  text-transform: capitalize;
-  line-height: 1.8;
-}
-
-.drink span {
-  margin-right: 0.5rem;
-}
-
-.drink-data {
-  background: $primaryLightColor;
-  padding: 0.25rem 0.5rem;
-  border-radius: $mainBorderRadius;
-  color: $primaryColor;
-}
-
 .drink-info {
   padding-top: 2rem;
 
   @media screen and (min-width: 1024px) {
     padding-top: 0;
   }
+}
+
+.drink p {
+  font-weight: bold;
+  text-transform: capitalize;
+  line-height: 1.8;
+}
+
+.drink-data {
+  margin-right: 0.5rem;
+  background: $primaryLightColor;
+  padding: 0.25rem 0.5rem;
+  border-radius: $mainBorderRadius;
+  color: $primaryColor;
 }

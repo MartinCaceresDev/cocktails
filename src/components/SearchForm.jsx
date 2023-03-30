@@ -14,7 +14,7 @@ export const SearchForm = () => {
   const handleSubmit = (e) => e.preventDefault();
 
   return (
-    <section className='section search'>
+    <section className='search'>
       <form className='search-form' onSubmit={handleSubmit}>
         <div className='form-control'>
           <label htmlFor='name'>search your favorite cocktail</label>

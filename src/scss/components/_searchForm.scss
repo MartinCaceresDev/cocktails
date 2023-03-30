@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/placeholders' as *;
 
 .search {
+  @extend %section;
   padding-bottom: 0;
 
   @media (min-width: 640px) {

@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/placeholders' as *;
 
 .error-page {
+  @extend %section;
   display: flex;
   justify-content: center;
 }
