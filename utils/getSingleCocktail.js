@@ -1,5 +1,11 @@
 import { singleCocktailBaseURL } from "./urls";
 
+/**
+ * 
+ * @param {String} id - Receives an id (string) of the chosen cocktail to make the query.
+ * @returns If query is successfull returns a single cocktail object with these properties: name, image, info, category, glass, instructions and ingredients.
+ */
+
 export const getSingleCocktail = async (id)=>{
   try {
     const response = await fetch(`${singleCocktailBaseURL}${id}`);
