@@ -1,15 +1,20 @@
+import useSWRImmutable from 'swr/immutable';
+import { useGlobalContext } from '../context';
+import { getCocktails } from '../../utils';
 import { Cocktail, Loading } from './';
-import { useGlobalContext } from '../context'
 
 export const CocktailList = () => {
+  const { searchTerm } = useGlobalContext();
+  const { data, isLoading } = useSWRImmutable(searchTerm, getCocktails);
 
-  const { cocktails, loading } = useGlobalContext();
+  const newCocktails = data && data.drinks?.map(item => {
+    const { idDrink: id, strDrink: name, strDrinkThumb: image, strAlcoholic: info, strGlass: glass } = item;
+    return { id, name, image, info, glass };
+  });
 
-  if (loading) {
-    return <Loading />;
-  }
+  if (isLoading) return <Loading />;
 
-  if (!cocktails.length) {
+  if (!newCocktails?.length) {
     return (
       <h2 className='cocktails-section-title'>
         no cocktails matched your search criteria
@@ -21,10 +26,8 @@ export const CocktailList = () => {
     <section className='cocktails-section'>
       <h2 className='cocktails-section-title'>cocktails</h2>
       <div className='cocktails-center'>
-        {cocktails.map(item => (
-          <Cocktail key={item.id} {...item} />
-        ))}
+        {newCocktails.map(item => <Cocktail key={item.id} {...item} />)}
       </div>
     </section>
-  )
+  );
 };

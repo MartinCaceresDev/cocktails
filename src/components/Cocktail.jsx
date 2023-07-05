@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export const Cocktail = ({ image, name, id, info, glass }) => {
+
   return (
     <article className='cocktail'>
       <img src={image} alt={name} />
@@ -13,5 +14,5 @@ export const Cocktail = ({ image, name, id, info, glass }) => {
         </Link>
       </div>
     </article>
-  )
+  );
 };
