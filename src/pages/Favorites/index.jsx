@@ -17,9 +17,11 @@ export const Favorites = () => {
 
   if (!cocktails?.length) {
     return (
-      <h2 className={styles['favorites-section-title']}>
-        you have no favorites cocktails in your list
-      </h2>
+      <section className={styles['favorites-section']}>
+        <h2 className={styles['favorites-section-title']}>
+          you have no favorites cocktails in your list
+        </h2>
+      </section>
     );
   }
 
