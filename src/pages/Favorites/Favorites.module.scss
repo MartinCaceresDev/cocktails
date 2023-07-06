@@ -1,0 +1,22 @@
+@use '../../scss/abstracts/variables' as *;
+@use '../../scss/abstracts/placeholders' as *;
+
+.favorites-section {
+  @extend %section;
+}
+
+.favorites-section-title {
+  @extend %section-title;
+}
+
+.favorites-center {
+  width: $smallWidth;
+  margin: 0 auto;
+  max-width: $fullWidth;
+  display: grid;
+  gap: 2rem;
+
+  @media screen and (min-width: 640px) {
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  }
+}

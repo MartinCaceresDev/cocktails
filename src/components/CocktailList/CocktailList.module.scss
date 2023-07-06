@@ -3,6 +3,7 @@
 
 .cocktails-section {
   @extend %section;
+  padding-top: 3rem;
 }
 
 .cocktails-section-title {
@@ -14,9 +15,14 @@
   margin: 0 auto;
   max-width: $fullWidth;
   display: grid;
+  justify-content: center;
   gap: 2rem;
 
-  @media screen and (min-width: 640px) {
-    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  @media (min-width: 400px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  }
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 }

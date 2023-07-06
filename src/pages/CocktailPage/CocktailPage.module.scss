@@ -18,16 +18,27 @@
   margin: 0 auto;
   text-align: left;
 
-  @media screen and (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 3rem;
+    gap: 1.5rem;
     align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 3rem;
+    width: 85vw;
   }
 }
 
 .drink img {
   border-radius: $mainBorderRadius;
+  max-width: 350px;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    max-width: none;
+  }
 }
 
 .drink-info {
@@ -42,6 +53,10 @@
   font-weight: bold;
   text-transform: capitalize;
   line-height: 1.8;
+
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
 }
 
 .drink-data {

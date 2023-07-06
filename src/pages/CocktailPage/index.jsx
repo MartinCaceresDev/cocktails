@@ -3,11 +3,15 @@ import useSWRImmutable from 'swr/immutable';
 import { getSingleCocktail } from '../../../utils';
 import { Loading } from '../../components';
 import styles from './CocktailPage.module.scss';
+import { useHandleStorage } from '../../hooks/useHandleStorage';
+
 
 export const CocktailPage = () => {
 
   const { id } = useParams();
   const { data, isLoading } = useSWRImmutable(id, getSingleCocktail);
+  const { isAddedToStorage, toggleAdded } = useHandleStorage(id);
+
 
   if (isLoading) return <Loading />;
 
@@ -40,7 +44,7 @@ export const CocktailPage = () => {
 
       <Link to='/' className={`${styles.btn} ${styles['btn-primary']}`}>back home</Link>
 
-      <h2 className={styles['cocktailPage-section-title']}>{name}</h2>
+      <h1 className={styles['cocktailPage-section-title']}>{name}</h1>
 
       <div className={styles.drink}>
         <img src={image} alt={name}></img>
@@ -62,6 +66,12 @@ export const CocktailPage = () => {
               <span key={index}> {index < ingredients.length - 1 ? item + ',' : item + '.'}</span>
             ))}
           </p>
+          <button
+            className={`${styles.btn} ${styles['btn-primary']}`}
+            onClick={toggleAdded}
+          >
+            {!isAddedToStorage ? 'add to favorites' : 'remove from favorites'}
+          </button>
         </div>
       </div>
     </section>

@@ -2,19 +2,32 @@
 
 .navbar {
   background: #111;
-  height: 5rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   box-shadow: $lightShadow;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  @media (min-width: 300px) {
+    height: 5rem;
+  }
 }
 
 .nav-center {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  row-gap: 1rem;
   align-items: center;
   margin: 0 auto;
   max-width: $fullWidth;
   width: 95vw;
+
+  @media (min-width: 300px) {
+    flex-direction: row;
+  }
 
   @media (min-width: 640px) {
     width: $smallWidth;
