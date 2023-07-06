@@ -1,11 +1,10 @@
-@use '../abstracts/variables' as *;
+@use '../../scss/abstracts/variables' as *;
 
 .navbar {
-  background: $mainWhite;
+  background: #111;
   height: 5rem;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid $primaryColor;
   box-shadow: $lightShadow;
 }
 
@@ -22,6 +21,11 @@
   }
 }
 
+.nav-center a {
+  background: $primaryDarkColor;
+  padding: 10px;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -36,6 +40,8 @@
   transition: $mainTransition;
   margin-right: 0.2rem;
   padding: 0.25rem;
+  color: $offWhite;
+  background: transparent;
 
   @media (min-width: 640px) {
     margin-right: 0;
@@ -45,7 +51,7 @@
 }
 
 .nav-links a:hover {
-  color: $primaryColor;
+  color: $offWhite;
 }
 
 .logo {

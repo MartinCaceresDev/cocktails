@@ -1,0 +1,42 @@
+@use '../../scss/abstracts/variables' as *;
+@use '../../scss/components/buttons' as *;
+
+.cocktail {
+  background: $mainWhite;
+  margin-bottom: 2rem;
+  box-shadow: $lightShadow;
+  transition: $mainTransition;
+  display: flex;
+  flex-direction: column;
+  border-radius: $mainBorderRadius;
+
+  &:hover {
+    box-shadow: $darkShadow;
+  }
+
+  img {
+    height: 20rem;
+    object-fit: cover;
+    border-top-left-radius: $mainBorderRadius;
+    border-top-right-radius: $mainBorderRadius;
+  }
+}
+
+.cocktail-footer {
+  padding: 1.5rem;
+
+  p {
+    color: $darkGrey;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.cocktail-footer h3,
+.cocktail-footer h4 {
+  margin-bottom: 0.3rem;
+  color: $mainBlack;
+}
+
+.cocktail-footer h3 {
+  font-size: 2rem;
+}

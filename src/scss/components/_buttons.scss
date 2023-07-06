@@ -1,8 +1,6 @@
 @use '../abstracts/variables' as *;
 
-.btn,
-.btn-white,
-.btn-primary {
+.btn {
   text-transform: uppercase;
   letter-spacing: $mainSpacing;
   color: $primaryColor;
@@ -16,34 +14,39 @@
   border-radius: $mainBorderRadius;
   display: inline-block;
   margin-bottom: 0.6rem;
+
+  &:hover {
+    background: $primaryColor;
+    color: $mainWhite;
+  }
 }
 
-.btn:hover {
-  background: $primaryColor;
-  color: $mainWhite;
+.btn-white,
+.btn-primary {
+  @extend .btn
 }
 
 .btn-white {
-  background: transparent;
   color: $mainWhite;
   border-color: currentColor;
-}
 
-.btn-white:hover {
-  background: $mainWhite;
-  color: $primaryColor;
+  &:hover {
+    background: $mainWhite;
+    color: $primaryColor;
+  }
 }
 
 .btn-primary {
   background: $primaryColor;
   color: $mainWhite;
   border-color: transparent;
+
+  &:hover {
+    background: $primaryLightColor;
+    color: $primaryColor;
+  }
 }
 
-.btn-primary:hover {
-  background: $primaryLightColor;
-  color: $primaryColor;
-}
 
 .btn-block {
   width: 100%;
@@ -55,9 +58,9 @@
 
 .btn-details {
   padding: 0.25rem 0.4rem;
-}
 
-.btn-details:hover {
-  background: $primaryLightColor;
-  border-color: $primaryLightColor;
+  &:hover {
+    background: $primaryLightColor;
+    border-color: $primaryLightColor;
+  }
 }

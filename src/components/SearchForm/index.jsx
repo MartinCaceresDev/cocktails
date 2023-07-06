@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../../context';
+import styles from './SearchForm.module.scss';
 
 
 export const SearchForm = () => {
@@ -9,14 +10,14 @@ export const SearchForm = () => {
 
   useEffect(() => {
     searchValue.current.focus();
-  }, [])
+  }, []);
 
   const handleSubmit = (e) => e.preventDefault();
 
   return (
-    <section className='search'>
-      <form className='search-form' onSubmit={handleSubmit}>
-        <div className='form-control'>
+    <section className={styles.search}>
+      <form className={styles['search-form']} onSubmit={handleSubmit}>
+        <div className={styles['form-control']}>
           <label htmlFor='name'>search your favorite cocktail</label>
           <input
             type='text'
@@ -28,5 +29,5 @@ export const SearchForm = () => {
         </div>
       </form>
     </section>
-  )
+  );
 };

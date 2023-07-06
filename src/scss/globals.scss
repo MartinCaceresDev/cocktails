@@ -1,10 +1,17 @@
-@use '../abstracts/variables' as *;
+@use './abstracts/variables' as *;
+@use './abstracts/placeholders' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: $mainBlack;
-  background: $mainBackground;
+  color: $offWhite;
+  background: $mainBlack;
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;

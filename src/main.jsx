@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
 import { AppProvider } from './context';
-import './scss/main.scss';
+import './scss/globals.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,4 +15,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </BrowserRouter>
     </AppProvider>
   </React.StrictMode>,
-)
+);
