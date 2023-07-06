@@ -25,6 +25,7 @@ export const SearchForm = () => {
             id='name'
             ref={searchValue}
             onChange={e => setSearchTerm(e.target.value)}
+            autoComplete='off'
           />
         </div>
       </form>

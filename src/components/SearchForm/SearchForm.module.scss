@@ -44,9 +44,11 @@
   width: 100%;
   border: none;
   border-color: transparent;
-  background: $mainBlack;
+  background: $primaryColor;
   border-radius: $mainBorderRadius;
   padding: 0.5rem;
   font-size: 1.2rem;
   color: $offWhite;
+  letter-spacing: 1px;
+
 }

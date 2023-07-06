@@ -10,6 +10,10 @@
   @extend %section-title;
 }
 
+.section-title-no-results {
+  @extend %section-title-no-results;
+}
+
 .cocktails-center {
   width: $smallWidth;
   margin: 0 auto;

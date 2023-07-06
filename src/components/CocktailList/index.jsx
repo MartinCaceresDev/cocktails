@@ -17,7 +17,7 @@ export const CocktailList = () => {
 
   if (!cocktails?.length) {
     return (
-      <h2 className={styles['cocktails-section-title']}>
+      <h2 className={styles['section-title-no-results']}>
         no cocktails matched your search criteria
       </h2>
     );

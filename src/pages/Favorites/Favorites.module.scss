@@ -9,6 +9,10 @@
   @extend %section-title;
 }
 
+.favorites-section-title-no-results {
+  @extend %section-title-no-results;
+}
+
 .favorites-center {
   width: $smallWidth;
   margin: 0 auto;
